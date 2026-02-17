@@ -1,5 +1,6 @@
 selenium
 pytest
 webdriver-manager
-requests
+pytest-html
 pytest-xdist
+requests
