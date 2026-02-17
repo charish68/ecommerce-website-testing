@@ -1,8 +1,9 @@
 from automation.pages.login_page import LoginPage
+from automation.config.config import Config
 
 
 def test_login_with_invalid_credentials(driver):
-    driver.get("https://automationexercise.com/login")
+    driver.get(Config.LOGIN_URL)
 
     login = LoginPage(driver)
     login.enter_email("wrong@test.com")
