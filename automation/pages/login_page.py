@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 from .base_page import BasePage
+from automation.utils.wait_utils import WaitUtils
 
 
 class LoginPage(BasePage):
@@ -8,11 +9,15 @@ class LoginPage(BasePage):
     PASSWORD_INPUT = (By.NAME, "password")
     LOGIN_BUTTON = (By.XPATH, "//button[text()='Login']")
 
+    def __init__(self, driver):
+        super().__init__(driver)
+        self.wait = WaitUtils(driver)
+
     def enter_email(self, email):
-        self.driver.find_element(*self.EMAIL_INPUT).send_keys(email)
+        self.wait.wait_for_element(self.EMAIL_INPUT).send_keys(email)
 
     def enter_password(self, password):
-        self.driver.find_element(*self.PASSWORD_INPUT).send_keys(password)
+        self.wait.wait_for_element(self.PASSWORD_INPUT).send_keys(password)
 
     def click_login(self):
-        self.driver.find_element(*self.LOGIN_BUTTON).click()
+        self.wait.wait_for_element(self.LOGIN_BUTTON).click()
