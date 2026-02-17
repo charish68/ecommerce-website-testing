@@ -22,4 +22,4 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest -n auto -v --html=report.html --self-contained-html
+          pytest -n auto -v --alluredir=allure-results
