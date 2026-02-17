@@ -29,8 +29,20 @@ Bug Reports
 
 RTM
 
-Automation (Upcoming)
+🤖 Automation Framework
 
-🌐 Test Website
+This project includes Selenium + Pytest based automation testing.
 
-https://automationexercise.com
+🔧 Tech Stack:
+
+Python
+
+Selenium WebDriver
+
+Pytest
+
+WebDriver Manager
+
+▶ How to Run Tests
+pip install -r requirements.txt
+pytest
