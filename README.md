@@ -48,3 +48,14 @@ WebDriver Manager
 ▶ How to Run Tests
 pip install -r requirements.txt
 pytest
+## 📊 Reporting
+
+This project supports:
+- Pytest HTML Reports
+- Allure Reporting Dashboard
+
+To generate Allure report locally:
+
+```bash
+pytest --alluredir=allure-results
+allure serve allure-results
