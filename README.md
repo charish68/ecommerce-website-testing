@@ -59,3 +59,9 @@ To generate Allure report locally:
 ```bash
 pytest --alluredir=allure-results
 allure serve allure-results
+## 🐳 Run with Docker
+
+Build image:
+
+```bash
+docker build -t automation-framework .
