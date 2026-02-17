@@ -1,11 +1,15 @@
 import json
+import os
 import pytest
 from automation.pages.login_page import LoginPage
 from automation.config.config import Config
 
 
 def load_test_data():
-    with open("automation/test_data/login_data.json") as f:
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    file_path = os.path.join(base_dir, "test_data", "login_data.json")
+
+    with open(file_path) as f:
         return json.load(f)
 
 
