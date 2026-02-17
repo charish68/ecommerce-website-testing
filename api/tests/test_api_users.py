@@ -1,3 +1,9 @@
+import pytest
+import os
+
+if os.getenv("CI"):
+    pytest.skip("Skipping API tests in CI due to Cloudflare blocking", allow_module_level=True)
+
 import requests
 
 
