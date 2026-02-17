@@ -1,3 +1,5 @@
+![CI](https://github.com/charish68/ecommerce-website-testing/actions/workflows/automation.yml/badge.svg)
+
 🛒 E-Commerce Website Testing Project
 📌 Project Overview
 
